@@ -1,7 +1,6 @@
 baseURL = "https://noumena-network.github.io/"
 languageCode = "en-us"
 title = "Noumena Research"
-theme = ""
 
 [params]
   description = "Research from Noumena"
