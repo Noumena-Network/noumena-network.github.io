@@ -1,33 +1,4 @@
 (() => {
-  function setMobileMenuOpen(isOpen) {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
-    if (!toggle || !menu) return;
-
-    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-    menu.setAttribute("aria-hidden", isOpen ? "false" : "true");
-    document.documentElement.classList.toggle("mobile-menu-open", isOpen);
-  }
-
-  function initMobileMenu() {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
-    if (!toggle || !menu) return;
-
-    toggle.addEventListener("click", () => {
-      const isOpen = toggle.getAttribute("aria-expanded") === "true";
-      setMobileMenuOpen(!isOpen);
-    });
-
-    menu.addEventListener("click", (e) => {
-      if (e.target === menu) setMobileMenuOpen(false);
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") setMobileMenuOpen(false);
-    });
-  }
-
   function normalizeHeadingText(text) {
     return (text || "").replace(/\s+/g, " ").trim();
   }
@@ -222,7 +193,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    initMobileMenu();
     buildTOC();
     transformFootnotesToSidenotes();
     initBackToTop();

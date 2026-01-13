@@ -610,8 +610,6 @@ body.has-sidenotes section.footnotes { display: none; }
 }
 
 @media (max-width: 700px) {
-  .top-nav { display: none; }
-  .hamburger { display: inline-block; }
   #main { padding: 3rem 1.25rem 4rem; }
   .post-title { font-size: 28px; }
   .post-subtitle { font-size: 17px; }
