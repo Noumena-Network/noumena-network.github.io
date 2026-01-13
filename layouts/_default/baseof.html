@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .Title }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
+  <!-- Medium Zoom -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"></script>
+
+  <!-- KaTeX for math -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\\\[', right: '\\\\]', display: true},
+        {left: '\\\\(', right: '\\\\)', display: false}
+      ],
+      throwOnError: false,
+      ignoredTags: ['script','noscript','style','textarea','pre','code']
+    });"></script>
+
+  <!-- Mermaid for diagrams -->
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="{{ "logos/favicon.svg" | relURL }}">
+
+  <!-- Site scripts -->
+  <script defer src="{{ "js/site.js" | relURL }}"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <main id="main" class="{{ if .IsHome }}home{{ else }}post{{ end }}">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer id="footer">
+    <a href="{{ .Site.Home.RelPermalink }}" class="footer-wordmark" aria-label="Noumena home">
+      <img src="{{ "logos/wordmark-dark.svg" | relURL }}" alt="Noumena" />
+    </a>
+    <div class="footer-meta">© {{ now.Year }}</div>
+  </footer>
+</body>
+</html>

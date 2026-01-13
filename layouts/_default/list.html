@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <div class="index-header">
+    <img src="{{ "logos/research-dark.svg" | relURL }}" alt="Noumena Research" class="research-logo" />
+  </div>
+
+  <ul class="post-list">
+    {{ range .Pages.ByDate.Reverse }}
+      <li>
+        {{ with .Params.number }}<div class="post-number">{{ . }}</div>{{ end }}
+        <h2 class="post-list-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Params.subtitle }}<p class="excerpt">{{ . }}</p>{{ end }}
+        <div class="date">{{ .Date.Format "Jan 2006" }}</div>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}

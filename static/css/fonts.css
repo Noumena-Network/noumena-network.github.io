@@ -1,0 +1,91 @@
+/* GT America - Sans-serif for UI/navigation */
+@font-face {
+  font-family: 'GT America';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/gt-america/GT-America-Standard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GT America';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/gt-america/GT-America-Standard-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'GT America';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/gt-america/GT-America-Standard-Bold.woff2') format('woff2');
+}
+
+/* Iowan Old Style - Serif for body/titles */
+@font-face {
+  font-family: 'Iowan Old Style BT';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/iowan-old-style/iowan-old-style_regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Iowan Old Style BT';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/iowan-old-style/iowan-old-style_italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Iowan Old Style BT';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/iowan-old-style/iowan-old-style_bold.woff2') format('woff2');
+}
+
+/* Chakra Petch - For wordmark/logo type */
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/chakra-petch/chakra-petch-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/chakra-petch/chakra-petch-v12-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Chakra Petch';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/chakra-petch/chakra-petch-v12-latin-600.woff2') format('woff2');
+}
+
+/* JetBrains Mono - For code */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/jetbrains-mono/JetBrainsMono-Medium.woff2') format('woff2');
+}

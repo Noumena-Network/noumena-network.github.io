@@ -1,0 +1,49 @@
+{{ define "main" }}
+  <div class="post-logo">
+    <a href="{{ .Site.Home.RelPermalink }}">
+      <img src="{{ "logos/logo-light.svg" | relURL }}" alt="Noumena" />
+    </a>
+  </div>
+
+  <div class="post-heading">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Params.subtitle }}
+      <p class="post-subtitle">{{ . }}</p>
+    {{ end }}
+
+    <div class="publish-metadata">
+      {{ $author := .Params.author | default .Site.Params.author }}
+      {{ with $author }}
+        <span class="author">{{ . }}</span>
+      {{ end }}
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+    </div>
+  </div>
+
+  {{ with .Params.cover }}
+    <div class="post-cover">
+      <img data-zoomable src="{{ . | relURL }}" loading="lazy" alt="{{ $.Params.cover_alt | default "" }}">
+    </div>
+  {{ end }}
+
+  <article class="content">
+    <nav id="left-toc" class="left-toc" aria-label="Table of contents"></nav>
+    {{ .Content }}
+  </article>
+
+  <div class="paginator" aria-label="Post navigation">
+    {{ with .PrevInSection }}
+      <a class="link" href="{{ .RelPermalink }}" title="{{ .Title }}">prev</a>
+    {{ else }}
+      <span class="link disabled" aria-hidden="true">prev</span>
+    {{ end }}
+
+    <a href="#" id="back-to-top" class="link" title="Go to top">back to top</a>
+
+    {{ with .NextInSection }}
+      <a class="link" href="{{ .RelPermalink }}" title="{{ .Title }}">next</a>
+    {{ else }}
+      <span class="link disabled" aria-hidden="true">next</span>
+    {{ end }}
+  </div>
+{{ end }}

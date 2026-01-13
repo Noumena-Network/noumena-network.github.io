@@ -1,0 +1,17 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# Hugo lock file
+.hugo_build.lock
+
+# Drafts (local only)
+drafts/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
